@@ -430,6 +430,7 @@ async def txt_handler(client: Client, m: Message):
         f"➥ /addauth xxxx – Add User ID\n" 
         f"➥ /rmauth xxxx – Remove User ID\n"  
         f"➥ /users – Total User List\n"  
+        f"➥ /upgrade xxxx – buy User ID\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
         f"💡 𝗡𝗼𝘁𝗲:\n\n"  
         f"• Send any link for auto-extraction\n"  
@@ -672,8 +673,8 @@ async def txt_handler(bot: Client, m: Message):
                 keys_string = " ".join([f"--key {key}" for key in keys])
 
             elif "classplusapp.com/drm/" in url:
-                url = f"https://key-one-gamma.vercel.app/api?url={url}&token={raw_text4}"
-                #url = 'https://dragoapi.vercel.app/classplus?link=' + url
+                #url = f"https://key-one-gamma.vercel.app/api?url={url}&token={raw_text4}"
+                url = f"https://classplus-proxy.onrender.com/api?url={url}&token={raw_text4}"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
@@ -953,7 +954,7 @@ async def text_handler(bot: Client, m: Message):
                 keys_string = " ".join([f"--key {key}" for key in keys])
 
             elif "classplusapp.com/drm/" in url:
-                url = 'https://dragoapi.vercel.app/classplus?link=' + url
+                url = f"https://classplus-proxy.onrender.com/api?url={url}&token={raw_text4}"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
