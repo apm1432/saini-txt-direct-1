@@ -54,7 +54,7 @@ if os.path.exists(TOKEN_LIST_PATH):
 def get_current_token():
     global token_list, current_token, used_token_counter
 
-    if used_token_counter >= 100 or current_token is None:
+    if used_token_counter >= 150 or current_token is None:
         if not token_list:
             return None  # No token available
         current_token = token_list.pop(0)
