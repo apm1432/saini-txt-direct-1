@@ -673,8 +673,8 @@ async def txt_handler(bot: Client, m: Message):
                 keys_string = " ".join([f"--key {key}" for key in keys])
 
             elif "classplusapp.com/drm/" in url:
-             #   url = f"https://key-one-gamma.vercel.app/api?url={url}&token={raw_text4}"
-                url = f"https://drmapijion-botupdatevip.vercel.app/api?url={url}&token={raw_text4}"
+                url = f"https://key-one-gamma.vercel.app/api?url={url}&token={raw_text4}"
+                
                 mpd, keys = helper.get_mps_and_keys2(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
